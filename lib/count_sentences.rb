@@ -15,7 +15,6 @@ class String
   end
 
   def count_sentences
-    # self.split('. ').join.split('? ').join.split('! ').select {|i| i }.size
     count = 0
     self.split.each {|word|
       if word.sentence? || word.question? || word.exclamation?
@@ -24,4 +23,5 @@ class String
     }
     count
   end
+  
 end
