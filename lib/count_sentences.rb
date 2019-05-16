@@ -25,11 +25,12 @@ class String
   end
 
   def count_sentences
-    temp = self.split(/[.?!]/)  #thank you stack overflow https://stackoverflow.com/questions/19509307/split-string-by-multiple-delimiters/19509391
+    #temp = self.split(/[.?!]/)  #thank you stack overflow https://stackoverflow.com/questions/19509307/split-string-by-multiple-delimiters/19509391
     
-    temp = temp.flatten
-    temp = temp.reject{|i| i == ""}
+    #temp = temp.flatten
+    #temp = temp.reject{|i| i == ""} # rejects all elements that are blank from the temp array
     
+    temp = self.split(/[.?!]/).flatten.reject{|i| i == ""}  # combining enumerators!
     return temp.length
   end
 end
